@@ -1,0 +1,66 @@
+@font-face {
+    font-family: newEdge666;
+    src: url(assests/NewEdge666Test-RegularRounded.otf);
+}
+  
+
+:root {
+    --light-bg-color: #F1F1EA;
+    --dark-bg-color: #3E3C3C;
+    --light-section-color: #F5DDE1;
+    --light-primary-font-color: #533826;
+    --primary-font: newEdge666;
+    --dark-primary-font-color: #E4E2DD;
+    --secondary-font: Luxurious Script;
+    --primary-font-size: 15px;
+    --heading-font-size: 30px;
+    --title-font-size: 35px;
+    --light-button-color: #D7A3AA;
+    --light-contrast-font-color: #F5F5F5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-bg-color);
+    font-family: var(--primary-font);
+    color: var(--light-primary-font-color);
+    font-size: var(--primary-font-size);
+    margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark-bg-color);
+        color: var(--dark-primary-font-color);
+    }
+}
+
+@media screen and (300px < width < 500px) {
+    .header-wrapper {
+        display: flex;
+        background-color: var(--light-section-color);
+        flex-direction: column;
+    }
+
+    .rect {
+        display: flex;
+        position: relative;
+    }
+
+    .scallop {
+        position: absolute;
+        top: 125px;
+    }
+
+    .logo {
+        padding: 40px 30px 10px;
+    }
+
+    .page-name {
+        font-size: var(--title-font-size);
+        line-height: 0.1px;
+    }
+}
