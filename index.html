@@ -11,71 +11,109 @@
 
     <body>
         <header>
-            <div class="header-wrapper">
-                <div class="logo">
-                    <p class="sitename">TO BE LOVED.</p>
-                    <h1 class="title-text">HOME</h1>
+            <div class="header">
+                <nav>
+                    <div class="logo">
+                        <p class="sitename">To Be LOVED.</p>
+                        <h1 class="title-text">HOME</h1>
+                    </div>
+            
+                        <input id="btnmenu" type="checkbox" hidden>
+                        <label for="btnmenu">
+                            <svg class="hamburger" width="49" height="23" viewBox="0 0 49 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line y1="0.5" x2="49" y2="0.5" stroke="black"/>
+                                <line y1="11.5" x2="49" y2="11.5" stroke="black"/>
+                                <line y1="22.5" x2="49" y2="22.5" stroke="black"/>
+                            </svg>
+                                
+                            <svg class="X" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="0.353539" y1="35.0018" x2="35.0018" y2="0.353562" stroke="black"/>
+                                <line x1="1.06065" y1="0.3536" x2="35.7089" y2="35.0018" stroke="black"/>
+                            </svg>
+                        </label>
 
-                   <div class="nav"></div>
-                </div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="all-recipes.html">All Recipes</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         
-        <div class="body-wrapper">
-            <main>
-                <h2 class="heading-text">Recently Added</h2>
+        <main>
+            <h2 class="heading-text">Recently Added</h2>
+            
+            <div class="recipe-wrapper">
+                <a href="recipe1.html">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="assests/banana-bread.jpg" alt="a picture of banana bread">
+                        </div>
+                        <div class="line"></div>
+                        <p class="recipe-display-name">Banana Bread</p>
+                    </div>
+                </a>
                 
-                <div class="recipe-wrapper">
-                    <div class="recipe-card-small">
-                        <div class="line"></div>
-                        <p class="recipe-display-name">Dish Name</p>
-                    </div>
 
-                    <div class="recipe-card-small">
-                        <div class="line"></div>
-                        <p class="recipe-display-name">Dish Name</p>
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="assests/abc-soup.jpg" alt="a picture of abc soup">
                     </div>
-
-                    <div class="recipe-card-small">
-                        <div class="line"></div>
-                        <p class="recipe-display-name">Dish Name</p>
-                    </div>
-
-                    <div class="recipe-card-small">
-                        <div class="line"></div>
-                        <p class="recipe-display-name">Dish Name</p>
-                    </div>
+                    <div class="line"></div>
+                    <p class="recipe-display-name">ABC Soup</p>
                 </div>
 
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="assests/miso-carbonara.jpg" alt="a picture of miso Carbonara">
+                    </div>
+                    <div class="line"></div>
+                    <p class="recipe-display-name">Miso Carbonara</p>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="assests/shrimp-egg-soup.jpg" alt="a picture of soupd">
+                    </div>
+                    <div class="line"></div>
+                    <p class="recipe-display-name">Shrimp Egg Soup</p>
+                </div>
+            </div>
+
+            <a href="all-recipes.html">
                 <div class="button">
                     <p>See more</p>
                 </div>
-            </main>
-    
-            <aside>
-                <div id="home-search">
-                    <h2 class="heading-text">Find your <span class="special-title">new favourite</span></h2>
-                    <div class="h-scroll">
-                        <div class="button">
-                            <p>Chinese</p>
-                        </div>
+            </a> 
+        </main>
 
-                        <div class="button">
-                            <p>Italian</p>
-                        </div>
-
-                        <div class="button">
-                            <p>Korean</p>
-                        </div>
+        <aside>
+            <div id="home-search">
+                <h2 class="heading-text">Find your <span class="special-title">new favourite</span></h2>
+                <div class="h-scroll">
+                    <div class="button">
+                        <p>Chinese</p>
                     </div>
 
-                    <div class="search-bar"></div>
+                    <div class="button">
+                        <p>Italian</p>
+                    </div>
+
+                    <div class="button">
+                        <p>Korean</p>
+                    </div>
                 </div>
-                
-                
-                <!-- <a href="all-recipes.html">Recipes</a>
-                <a href="recipe1.html">recipe 1</a> -->
-            </aside>
-        </div>
+
+                <div class="search-bar">
+                    <p>search your cravings</p>
+                </div>
+            </div>
+        </aside>
+
+        <footer>
+            <div class="footer">
+
+            </div>
+        </footer>
     </body>
 </html>

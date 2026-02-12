@@ -11,77 +11,115 @@
 
     <body>
         <header>
-            <div class="header-wrapper">
-                <div class="rect">
-                   <div class="logo">
-                        <p class="sitename">TO BE LOVED.</p>
-                        <h1 class="page-name">ALL</h1>
-                        <h1 class="special-title-header">Recipes</h1>
-                   </div>
+            <div class="header">
+                <nav>
+                    <div class="logo">
+                        <p class="sitename">To Be LOVED.</p>
+                        <h1 class="title-text">All <span class="special-title">Recipes</span></h1>
+                    </div>
+            
+                        <input id="btnmenu" type="checkbox" hidden>
+                        <label for="btnmenu">
+                            <svg class="hamburger" width="49" height="23" viewBox="0 0 49 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line y1="0.5" x2="49" y2="0.5" stroke="black"/>
+                                <line y1="11.5" x2="49" y2="11.5" stroke="black"/>
+                                <line y1="22.5" x2="49" y2="22.5" stroke="black"/>
+                            </svg>
+                                
+                            <svg class="X" width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="0.353539" y1="35.0018" x2="35.0018" y2="0.353562" stroke="black"/>
+                                <line x1="1.06065" y1="0.3536" x2="35.7089" y2="35.0018" stroke="black"/>
+                            </svg>
+                        </label>
 
-                   <div class="nav"></div>
-                </div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="all-recipes.html">All Recipes</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
-        <div class="body-wrapper">
-            <aside>
-                <div class="search-bar"></div>
-    
-                <p>Filter by Cuisine:</p>
-                <div class="h-scroll">
-                    <div class="button">
-                        <p>Chinese</p>
-                    </div>
-    
-                    <div class="button">
-                        <p>Italian</p>
-                    </div>
-    
-                    <div class="button">
-                        <p>Korean</p>
-                    </div>
+        <aside>
+            <div class="search-bar">
+                <p>What are you <span class="special-text">craving</span> today?</p>
+            </div>
+
+            <p>Filter by Cuisine:</p>
+            <div class="h-scroll">
+                <div class="button">
+                    <p>Chinese</p>
                 </div>
-    
-                <p>Filter by Flavour:</p>
-                <div class="h-scroll">
-                    <div class="button">
-                        <p>Spicy</p>
-                    </div>
-    
-                    <div class="button">
-                        <p>Non Spicy</p>
-                    </div>
-    
-                    <div class="button">
-                        <p>Sweet</p>
-                    </div>
+
+                <div class="button">
+                    <p>Italian</p>
                 </div>
-            </aside>
-    
-            <main class="recipe-stack">
+
+                <div class="button">
+                    <p>Korean</p>
+                </div>
+            </div>
+
+            <p>Filter by Flavour:</p>
+            <div class="h-scroll">
+                <div class="button">
+                    <p>Spicy</p>
+                </div>
+
+                <div class="button">
+                    <p>Non Spicy</p>
+                </div>
+
+                <div class="button">
+                    <p>Sweet</p>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <div class="recipe-stack">
+                <a href="recipe1.html">
+                    <div class="recipe-card-large">
+                        <div class="recipe-image">
+                            <img src="assests/banana-bread.jpg" alt="a picture of banana bread">
+                        </div>
+                        <div class="line"></div>
+                        <p class="recipe-display-name-large">Banana Bread</p>
+                    </div>
+                </a>
+                
+
                 <div class="recipe-card-large">
+                    <div class="recipe-image">
+                        <img src="assests/shrimp-egg-soup.jpg" alt="a picture of soupd">
+                    </div>
                     <div class="line"></div>
-                    <p class="recipe-display-name-large">Dish Name</p>
+                    <p class="recipe-display-name-large">Shrimp Egg Soup</p>
                 </div>
-    
+
                 <div class="recipe-card-large">
+                    <div class="recipe-image">
+                        <img src="assests/miso-carbonara.jpg" alt="a picture of miso Carbonara">
+                    </div>
+                    
                     <div class="line"></div>
-                    <p class="recipe-display-name-large">Dish Name</p>
+                    <p class="recipe-display-name-large">Miso Carbonara</p>
                 </div>
-    
+
                 <div class="recipe-card-large">
+                    <div class="recipe-image">
+                        <img src="assests/abc-soup.jpg" alt="a picture of abc soup">
+                    </div>
                     <div class="line"></div>
-                    <p class="recipe-display-name-large">Dish Name</p>
+                    <p class="recipe-display-name-large">ABC soup</p>
                 </div>
-    
-                <div class="recipe-card-large">
-                    <div class="line"></div>
-                    <p class="recipe-display-name-large">Dish Name</p>
-                </div>
-            </main>
-        </div>
-        
-        <a href="index.html">home</a>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer">
+
+            </div>
+        </footer>
     </body>
 </html>
