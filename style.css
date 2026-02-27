@@ -11,12 +11,12 @@
     --primary-font: newEdge666;
     --dark-primary-font-color: #E4E2DD;
     --secondary-font: Luxurious Script;
-    --primary-font-size: 3.82vw;
-    --heading-font-size: 7.63vw;
-    --title-font-size: 8.91vw;
+    --primary-font-size: 0.9rem;
+    --heading-font-size: 1.5rem;
+    --second-title-font-size: 3rem;
+    --title-font-size: 2rem;
     --light-button-color: #D7A3AA;
     --light-contrast-font-color: #F5F5F5;
-    --content-padding: 7.63vw;
     --light-search-bg: #F2ECE8;
     --light-search-text-color: #99877B;
 
@@ -128,10 +128,11 @@ header {
 
                 background-color: var(--light-bg-color);
 
-                top: 30vw;  
+                top: 35vw; 
                 left: 100%;
 
                 transition: left 0.2s ease-in-out;
+            
 
                 li {
                     padding: 0;
@@ -191,6 +192,18 @@ header {
                 }
             }
         }
+    }
+}
+
+.header-image {
+    margin: 5vw 0 10vw;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        object-position: center;
     }
 }
 
@@ -299,12 +312,28 @@ main {
             padding: 7vw 0 0 3vw;
         }
     }
+
+    .recipe-holder {
+        img {
+            width: 100%;
+            height: 50vw;
+
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .ingredients {
+            .ingredients-title {
+                font-size: var(--second-title-font-size);
+            }
+            
+        }
+    }
 }
 
 .button {
     height: 2.66em;
     min-width: 8.6em;
-    max-width: 9em;
     border-radius: 10px;
 
     display: flex;
@@ -315,11 +344,12 @@ main {
 
     background-color: var(--light-button-color);
     color: var(--light-contrast-font-color);
+    border: none;
 }
 
 .h-scroll {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 5vw;
 
     overflow-x: scroll;
@@ -330,6 +360,8 @@ main {
 .search-bar {
     border: 1px solid var(--light-primary-font-color);
     border-radius: 99px;
+    display: flex;
+    align-items: center;
 
     height: 10vw;
 
@@ -342,15 +374,34 @@ main {
 aside {
     padding: 2rem 1rem;
 
+    #all-recipes-desc {
+        text-align: center;
+        text-wrap: pretty;
+        margin: -2rem 0 2rem 0;
+    }
+
     #home-search {
         display: grid;
-        grid-template-rows: 1fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
         align-items: center;
+
+        margin: 0 0 15vw 0;
 
         .special-title {
             font-size: 1.5em;
             font-style: normal;
         }
+
+        #desktop-desc {
+            display: none;
+        }
+        .desktop-img-wrapper {
+            display: none;
+            #desktop-img {
+                display: none;
+            }
+        }
+        
     }
 }
 
@@ -368,6 +419,175 @@ footer {
 
         @container (width > 760px) {
             --inline-padding: 2rem;
+        }
+    }
+}
+
+@media (width > 500px) {
+    .button {
+        min-width: 15em;
+        height: 3.5em
+    }
+
+    .heading-text {
+        font-size: 2.8rem;
+    }
+
+    p {
+        font-size: 150%;
+        line-height: 1.3;
+    }
+
+    header {
+        .header nav ul {
+            top: 20vw;
+        }
+    }
+
+    section {
+        .header-image {
+            height: 150px;
+        }
+    }
+
+    .h-scroll {
+        margin: 0 0 3rem 0;
+    }
+
+    main {
+        padding: 2rem 3rem;
+        .recipe-wrapper {
+            grid-template-columns: repeat(4, 31vw);
+            
+            .recipe-card {
+                height: 35vw;
+                grid-template-rows: 3.5fr 1fr;
+
+                .recipe-display-name {
+                    font-size: 150%;
+                    padding: 0 0 0 1rem;
+                    margin: 0;
+                    
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        /* all recipes page */
+        .recipe-stack {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 5rem 2rem;
+
+            .recipe-card-large {
+                height: 35vw;
+
+                .recipe-display-name-large {
+                    font-size: 150%;
+                    padding: 0 0 0 1rem;
+                    margin: 0;
+                    
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+        
+    }
+
+    aside {
+        padding: 2rem 3rem;
+
+        #home-search {
+            margin-bottom: 5rem;
+            .search-bar {
+                height: 7vw;
+    
+                p {
+                    margin: 0.7rem 1.2rem 
+                }
+            }
+        }
+    }
+}
+
+@media (width > 1023px) {
+    section {
+        .header-image {
+            margin-top: 1rem;
+            height: 150px;
+        }
+    }
+    p {
+        font-size: 170%;
+    }
+
+    main {
+        /* home screen */
+        margin-top: -4rem;
+        .recipe-wrapper {
+            grid-template-columns: repeat(4, 20vw);
+            margin-bottom: 5rem;
+            
+            .recipe-card {
+                height: 24vw;
+
+                .recipe-display-name {
+                    display: flex;
+                    align-items: center;
+                    padding: 1rem 0 0 1rem;
+                    margin: 0;
+                }
+            }
+        }
+
+        
+    }
+    aside {
+        #home-search {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 6rem 10rem auto;
+            column-gap: 3rem;
+            align-items: start;
+
+            margin: 10vw 0 15vw 0;
+
+            .search-bar {
+                height: 4vw;
+                width: 45vw;
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            #desktop-desc {
+                display: flex;
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            .desktop-img-wrapper {
+                display: flex;
+                width: 40vw;
+                height: 35vw;
+                overflow: hidden;
+                margin-top: -6vw;
+
+                grid-column: 2;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                
+
+                border: 1px solid var(--light-primary-font-color);
+                border-radius: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; 
+                    object-position: center;
+                }
+            }
         }
     }
 }
