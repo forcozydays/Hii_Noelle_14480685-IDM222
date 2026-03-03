@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>ABC soup ♡</title>
+        <title>ABC Soup ♡</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,32 +41,84 @@
         </header>
 
         <main>
-            <a class="link" href="all-recipes.html">Back</a>
+            <a class="link" href="all-recipes.html">
+                <button class="back">Back</button>
+            </a>
 
             <h2 class="heading-text">ABC Soup</h2>
-            <a class="link" href="#ingredients">Jump to Recipe</a>
+            <a class="link" href="#ingredients">
+                <button class="to-recipe">Jump to Recipe</button> 
+            </a>
             <p class="all-recipes-desc">
                 Comforting, nourishing, and beautifully simple, Malaysian ABC Soup is a home-style chicken and vegetable soup loved for its natural sweetness and clarity. Made with bone-in chicken, carrots, potatoes, tomatoes, and onion, it’s gently simmered until the broth becomes rich and aromatic. It’s the kind of soup that feels like home — wholesome, light, and deeply satisfying.
             </p>
 
-            <div class="recipe-holder">
-                <div id="individual-recipe-img">
-                    <img src="assests/abc-soup.jpg">
-                </div>
+            <section id="info">
+                <div class="recipe-holder">
+                    <div id="individual-recipe-img">
+                        <img src="assests/abc-soup.jpg">
+                    </div>
 
-                <div id="recipe-info">
-                    <p>
-                        “ABC” stands for “Aneka Bahan Campur,” meaning mixed ingredients. It refers to the simple combination of vegetables and chicken simmered together.
-                        Slow simmering bone-in chicken releases natural richness, while carrots, tomatoes, and onions add sweetness and subtle acidity. The magic is in the gentle cooking.
-                        Though often enjoyed during cooler weather, this soup is light enough for year-round cooking. It’s especially popular as a nourishing family meal. A gentle simmer — not a rolling boil — is key. Skimming off foam early in the cooking process helps maintain that beautifully clear, golden broth.
-                    </p>
-                </div>
+                    <section id="extra-recipes">
+                        <h3 id="related-recipes">Related Recipes</h3>
+                        <div id="recipe-stack">
+                            <a href="banana-bread.html">
+                                <div class="recipe-cards">
+                                    <div class="recipe-image">
+                                        <img src="assests/banana-bread.jpg" alt="a picture of banana bread">
+                                    </div>
+                                    <div class="line"></div>
+                                    <p class="recipe-name">Banana Bread</p>
+                                </div>
+                            </a>
+                            
+                            <a href="shrimp-egg-soup.html">
+                                <div class="recipe-cards">
+                                    <div class="recipe-image">
+                                        <img src="assests/shrimp-egg-soup.jpg" alt="a picture of soupd">
+                                    </div>
+                                    <div class="line"></div>
+                                    <p class="recipe-name">Shrimp Egg Soup</p>
+                                </div>
+                            </a>
             
-                <div id="ingredients">
-                    <h3 class="ingredients-title">Ingredients</h3>
+                            <a href="miso-carbonara.html">
+                                <div class="recipe-cards">
+                                    <div class="recipe-image">
+                                        <img src="assests/miso-carbonara.jpg" alt="a picture of miso Carbonara">
+                                    </div>
+                                    
+                                    <div class="line"></div>
+                                    <p class="recipe-name">Miso Carbonara</p>
+                                </div>
+                            </a>
+                    </section>
+                    
+                    <div id="p1">
+                        <h3 class="q1">Why is it called ABC Soup?</h3>
+                        <p class="p1">“ABC” stands for Aneka Bahan Campur, which means “mixed ingredients.” It refers to the simple mix of vegetables and protein simmered together. Despite the humble name, this soup is a staple in many Malaysian homes and is often one of the first soups children grow up eating.</p>
+                    </div>
+                    
+                    <div id="p2">
+                        <h3 class="q2">What makes the broth taste so naturally sweet?</h3>
+                        <p class="p2">The sweetness comes entirely from the vegetables. Carrots, onions, and tomatoes slowly release their natural sugars as they simmer. Bone-in chicken adds richness and body, creating a broth that tastes complex without needing much seasoning.</p>
+                    </div>
 
-                    <ul>
-                        <li>Bone-In Chicken (1 lb / 450g)</li>
+                    <div id="p3">
+                    <h3 class="q3">Can you customize ABC Soup?</h3>
+                    <p class="p3">Absolutely. While the classic version includes carrots, potatoes, and tomatoes, many families add corn on the cob for extra sweetness, red dates for subtle herbal flavor, and cabbage for added texture.</p>
+                    </div>
+
+                    <div id="p4">
+                    <h3 class="q4">How do you keep the broth clear?</h3>
+                    <p class="p4">A gentle simmer is key. Avoid a rapid boil, which can cloud the broth. Skim off any foam in the first 10 minutes of cooking, and let everything cook slowly. The result is a beautifully clear, golden soup.</p>
+                    </div>
+                    
+                    <div id="ingredients">
+                        <h3 class="ingredients-title">Ingredients</h3>
+
+                        <ul>
+                            <li>Bone-In Chicken (1 lb / 450g)</li>
                         <li>Carrots (2 medium, sliced)</li>
                         <li>Potatoes (2 medium, chunked)</li>
                         <li>Tomatoes (2 medium, quartered)</li>
@@ -75,21 +127,22 @@
                         <li>Water (6 cups / 1.4 liters).</li>
                         <li>White Pepper (½ teaspoon).</li>
                         <li>Salt (to taste).</li>
-                    </ul>
-                </div>
-                
-                <div id="howto">
-                    <h3 class="ingredients-title">How To</h3>
+                        </ul>
+                    </div>
                     
-                    <ul>
-                        <li>Add chicken, water, onion, and garlic to a large pot. Bring to a boil, then reduce to a gentle simmer.</li>
+                    <div id="howto">
+                        <h3 class="ingredients-title">How To</h3>
+                        
+                        <ul>
+                            <li>Add chicken, water, onion, and garlic to a large pot. Bring to a boil, then reduce to a gentle simmer.</li>
                         <li>Skim off any foam.</li>
                         <li>Add carrots, potatoes, tomatoes, and optional corn/red dates.</li>
                         <li>Simmer gently for 45–60 minutes until chicken is tender and vegetables are soft.</li>
                         <li>Season with salt and white pepper to taste. Serve warm..</li>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </section>
         </main>
     </body>
 </html>
