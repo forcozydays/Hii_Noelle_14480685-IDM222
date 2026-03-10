@@ -42,7 +42,10 @@
 
         <section>
             <div class="header-image">
-                <img src="assests/all-recipes-header.jpg">
+                <picture>
+                    <source media="(min-width: 1023px)" srcset="assests/sandwhich.jpg" />
+                    <img src="assests/all-recipes-header.jpg" alt="all recipes header image"/>
+                </picture>
             </div>
         </section>
 
@@ -50,7 +53,7 @@
             <h2 id="all-recipes-title" class="heading-text">All Recipes</h2>
             <p id="all-recipes-desc">Browse our complete collection of tried-and-true recipes, from comforting classics to fresh new favorites, all in one delicious place.</p>
             <div class="search-bar">
-                <p>What are you <span class="special-text">craving</span> today?</p>
+                <input type="text" placeholder="what are you craving today?" />
             </div>
 
             <p>Filter by Cuisine:</p>

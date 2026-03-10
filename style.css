@@ -19,8 +19,10 @@
     --light-contrast-font-color: #F5F5F5;
     --light-search-bg: #F2ECE8;
     --light-search-text-color: #99877B;
-
-    /* put the transition times here too */
+    --card-hover-expand: transform 0.3s ease-in-out;
+    --button-hover: background-color 0.2s ease-in;
+    --font-color-change-hover: color 0.2s ease-in;
+    --font-size-transition: font-size 0.2s ease-out; 
     /* for reduced motion query, set time to 0.1s */
 }
 
@@ -35,6 +37,7 @@ body {
     font-size: var(--primary-font-size);
     margin: 0;
     text-wrap: pretty;
+    transition: var(--font-size-transition);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,8 +67,7 @@ header {
     .header {
         --inline-padding: 1rem;
         container-type: inline-size;
-        
-    
+
         nav {
             padding: 1.5rem var(--inline-padding);
 
@@ -83,16 +85,26 @@ header {
                 .sitename {
                     font-size: var(--primary-font-size);
                     margin-bottom: 0;
+                    transition: var(--font-size-transition);
                 }
 
                 .title-text {
                     margin: 0;
                     font-weight: normal;
                     font-size: var(--title-font-size);
+                    transition: var(--font-size-transition);
                 }
 
                 .special-title {
                     font-size: 120%;
+                }
+                @container (width > 1023px) {
+                    .sitename {
+                        font-size: 150%;
+                    }
+                    .title-text {
+                        font-size: 3rem;
+                    }
                 }
             }
     
@@ -133,7 +145,7 @@ header {
 
                 background-color: var(--light-bg-color);
 
-                top: 35vw; 
+                top: 28vw; 
                 left: 100%;
 
                 transition: left 0.2s ease-in-out;
@@ -159,7 +171,6 @@ header {
             input[type="checkbox"]:checked {
                 & ~ ul { 
                     left: 0; 
-
                     transition: ease 0.2s; 
                 }
 
@@ -190,8 +201,14 @@ header {
     
                     li {
                         a {
-                            font-size: 100%;
+                            font-size: 150%;
                             border: 0;
+                            text-decoration: underline transparent;
+                            transition: var(--font-size-transition),
+                                        text-decoration 0.3s ease-in;
+                        }
+                        a:hover {
+                            text-decoration: underline;
                         }
                     }
                 }
@@ -223,7 +240,8 @@ main {
         overflow-x: scroll;
         scrollbar-width: none;
 
-        margin: 5vw 0 10vw;
+        margin: 1vw 0 6vw;
+        padding: 4vw 0;
 
         a {
             text-decoration: none;
@@ -324,6 +342,10 @@ main {
         padding: 0;
         color: var(--light-primary-font-color);
         cursor: pointer;
+        transition: var(--font-color-change-hover);
+    }
+    .back:hover, .to-recipe:hover {
+        color: var(--light-button-color);
     }
     .to-recipe {
         margin: 1rem 0 0 0;
@@ -405,7 +427,12 @@ main {
                         display: grid;
                         grid-template-rows: repeat(4, 1fr);
                         row-gap: 2rem;
-                        
+                        a {
+                            transition: var(--card-hover-expand);
+                        }
+                        a:hover{
+                            transform: scale(1.1);
+                        }
     
                         .recipe-cards {
                             height: 20vw;
@@ -485,7 +512,7 @@ main {
 
 .button {
     height: 2.66em;
-    min-width: 8.6em;
+    width: 8.6em;
     border-radius: 10px;
 
     display: flex;
@@ -497,6 +524,11 @@ main {
     background-color: var(--light-button-color);
     color: var(--light-contrast-font-color);
     border: none;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: var(--light-section-color);
+    color: var(--light-primary-font-color);
 }
 
 .h-scroll {
@@ -517,9 +549,14 @@ main {
 
     height: 10vw;
 
-    p {
+    input {
         margin: 0 0 0 1rem;
         color: var(--light-search-text-color);
+        background-color: transparent;
+        border: none;
+        font-size: 100%;
+        font-family: var(--primary-font);
+        width: 90%
     }
 }
 
@@ -680,8 +717,8 @@ footer {
 
     section {
         .header-image {
-            margin-top: 1rem;
-            height: 150px;
+            margin: 1rem 0 2.5rem 0;
+            height: 300px;
         }
     }
     p {
@@ -692,14 +729,23 @@ footer {
         column-gap: 2rem;
     }
 
+    .button {
+        transition: var(--button-hover), var(--font-color-change-hover);
+    }
+
     main {
         /* home screen */
         #home-heading {
-            margin-top: -4rem;
+            margin-top: -1rem;
         }
         .recipe-wrapper {
             grid-template-columns: repeat(4, 20vw);
-            margin-bottom: 5rem;
+            margin-bottom: 2rem;
+            padding: 3rem 0;
+            overflow: visible;
+            a {
+                transition: var(--card-hover-expand);
+            }
             
             .recipe-card {
                 height: 24vw;
@@ -711,12 +757,21 @@ footer {
                     margin: 0;
                 }
             }
+            a:hover{
+                transform: scale(1.1);
+            }
         }
 
         /* all recipes page */
         .recipe-stack {
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
+            a {
+                transition: var(--card-hover-expand);
+            }
+            a:hover{
+                transform: scale(1.1);
+            }
 
             .recipe-card-large {
                 height: 25vw;
