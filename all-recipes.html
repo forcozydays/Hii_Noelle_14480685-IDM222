@@ -53,47 +53,49 @@
             <h2 id="all-recipes-title" class="heading-text">All Recipes</h2>
             <p id="all-recipes-desc">Browse our complete collection of tried-and-true recipes, from comforting classics to fresh new favorites, all in one delicious place.</p>
             <div class="search-bar">
-                <input type="text" placeholder="what are you craving today?" />
+                <form id="input">
+                    <input type="search" id="recipeSearch" placeholder="what are you craving today?">
+                </form>
             </div>
 
             <p>Filter by Cuisine:</p>
             <div class="h-scroll">
-                <button class="button">
+                <button class="button" id="all">
+                    <p>All</p>
+                </button>
+
+                <button class="button" id="malaysian">
+                    <p>Malaysian</p>
+                </button>
+
+                <button class="button" id="singaporean">
+                    <p>Singaporean</p>
+                </button>
+
+                <button class="button" id="chinese">
                     <p>Chinese</p>
                 </button>
 
-                <button class="button">
-                    <p>Italian</p>
-                </button>
-
-                <button class="button">
-                    <p>Korean</p>
-                </button>
-
-                <button class="button">
-                    <p>Japanese</p>
-                </button>
-
-                <button class="button">
+                <button class="button" id="japanese">
                     <p>Japanese</p>
                 </button>
             </div>
 
             <p>Filter by Flavour:</p>
             <div class="h-scroll">
-                <button class="button">
+                <button class="button" id="spicy">
                     <p>Spicy</p>
                 </button>
 
-                <button class="button">
+                <button class="button" id="nonspicy">
                     <p>Non Spicy</p>
                 </button>
 
-                <button class="button">
+                <button class="button" id="sweet">
                     <p>Sweet</p>
                 </button>
 
-                <button class="button">
+                <button class="button" id="sour">
                     <p>Sour</p>
                 </button>
             </div>
@@ -166,8 +168,10 @@
 
         <footer>
             <div class="footer">
-
+                <p>to be loved, 2026</p>
             </div>
         </footer>
+
+        <script src="app.js"></script>
     </body>
 </html>

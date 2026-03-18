@@ -23,6 +23,7 @@
     --button-hover: background-color 0.2s ease-in;
     --font-color-change-hover: color 0.2s ease-in;
     --font-size-transition: font-size 0.2s ease-out; 
+    --card-size-transition: 0.3s ease-out;
     /* for reduced motion query, set time to 0.1s */
 }
 
@@ -275,10 +276,13 @@ main {
 
             .recipe-display-name {
                 border-top: 1px solid var(--light-primary-font-color);
-                padding: 5vw 0 0 3vw; 
-        
                 grid-row-start: 2;
-                margin-top: 0;
+                letter-spacing: -7%;
+        
+                padding: 0 0 0 1rem;
+                margin: 0;
+                display: flex;
+                align-items: center;
             }
         }
     }
@@ -293,6 +297,10 @@ main {
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         row-gap: 15vw;
+
+        #errormsg {
+            display: none;
+        }
 
         .recipe-card-large {
             height: 65vw;
@@ -343,6 +351,7 @@ main {
         color: var(--light-primary-font-color);
         cursor: pointer;
         transition: var(--font-color-change-hover);
+        font-size: 110%;
     }
     .back:hover, .to-recipe:hover {
         color: var(--light-button-color);
@@ -391,7 +400,13 @@ main {
             .recipe-holder {
                 display: grid;
                 grid-template-columns: 0.5fr 1fr;
+                grid-template-rows: repeat(5, auto) 1fr;
                 gap: 0 2rem; 
+
+                #right-col {
+                    grid-row-start: 1;
+                    grid-row-end: span 6;
+                }
         
                 #individual-recipe-img {
                     display: flex;
@@ -402,8 +417,6 @@ main {
                     border: 1px solid var(--light-primary-font-color);
                     border-radius: 10px;
                     grid-column: 1;
-                    grid-row-start: 1;
-                    grid-row-end: span 3;
         
                     img {
                         width: 100%;
@@ -416,7 +429,7 @@ main {
                     display: block;
     
                     grid-column: 1;
-                    grid-row-start: 4;
+                    grid-row-start: 2;
                     grid-row-end: span 3;
     
                     #related-recipes {
@@ -477,6 +490,12 @@ main {
                 #p1, #p2, #p3, #p4, #ingredients, #howto {
                     grid-column: 2;
                 }
+                /* #p1 {grid-row-start: 1;}
+                #p2 {grid-row-start: 2;}
+                #p3 {grid-row-start: 3;}
+                #p4 {grid-row-start: 4;}
+                #ingredients {grid-row-start: 5;}
+                #howto {grid-row-start: 6;} */
         
                 ul {
                     padding: 0 1rem;
@@ -542,12 +561,12 @@ main {
 }
 
 .search-bar {
-    border: 1px solid var(--light-primary-font-color);
-    border-radius: 99px;
-    display: flex;
-    align-items: center;
 
-    height: 10vw;
+    form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
 
     input {
         margin: 0 0 0 1rem;
@@ -556,7 +575,27 @@ main {
         border: none;
         font-size: 100%;
         font-family: var(--primary-font);
-        width: 90%
+        width: 100%;
+
+        border: 1px solid var(--light-primary-font-color);
+        border-radius: 99px;
+        padding: 0 1rem;
+
+        height: 5vw;
+    }
+
+    #submit {
+        background-color: transparent;
+        border: none;
+        color: var(--secondary-textcolor);
+        font-family: var(--primary-font);
+        cursor: pointer;
+        padding: 0 3rem 0 1rem;
+        transition: var(--font-color-change-hover);
+    }
+
+    #submit:hover {
+        color: var(--light-button-color);
     }
 }
 
@@ -604,10 +643,11 @@ footer {
         --inline-padding: 1rem;
         container-type: inline-size;
     
-        padding: 1.5rem var(--inline-padding);
+        padding: 2.5rem var(--inline-padding);
 
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        justify-content: end;
+        font-size: 90%;
 
         @container (width > 760px) {
             --inline-padding: 2rem;
@@ -659,9 +699,11 @@ footer {
             .recipe-card {
                 height: 35vw;
                 grid-template-rows: 3.5fr 1fr;
+                transition: var(--card-size-transition);
 
                 .recipe-display-name {
                     font-size: 150%;
+                    transition: var(--font-size-transition);
                 }
             }
         }
@@ -669,6 +711,7 @@ footer {
         /* all recipes page */
         .recipe-stack {
             .recipe-card-large {
+                transition: var(--card-size-transition);
                 .recipe-display-name-large {
                     font-size: 150%;
                     padding: 0 0 0 1rem;
