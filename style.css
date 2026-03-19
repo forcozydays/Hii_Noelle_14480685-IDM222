@@ -355,6 +355,7 @@ main {
 
     /* individual recipes */
     .back, .to-recipe {
+        display: block;
         background-color: transparent;
         border: none;
         font-family: var(--primary-font);
